@@ -75,6 +75,12 @@ open class SyntaxTextView: View {
 
     #if os(iOS)
 
+    public var contentLayoutGuide: UILayoutGuide {
+        get {
+            textView.contentLayoutGuide
+        }
+    }
+
     public var contentInset: UIEdgeInsets = .zero {
         didSet {
             textView.contentInset = contentInset
